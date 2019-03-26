@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gestao_de_Estoque
 {
-    class Utensilios_Domesticos
+    class Utensilios_Domesticos: Produto
     {
     }
 }

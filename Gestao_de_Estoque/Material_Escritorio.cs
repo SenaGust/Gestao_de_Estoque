@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gestao_de_Estoque
 {
-    class Material_Escritorio
+    class Material_Escritorio : Produto
     {
     }
 }
