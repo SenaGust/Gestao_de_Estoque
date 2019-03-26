@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gestao_de_Estoque
 {
-    interface Dado
+    interface IDado
     {
-        public Produto produto { get; set; }
+        Produto Produto { get; set; }
     }
 }

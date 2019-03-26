@@ -8,10 +8,10 @@ namespace Gestao_de_Estoque
 {
     class Elemento
     {
-        public Dado MeuDado { get; set; }
+        public IDado MeuDado { get; set; }
         public Elemento Prox { get; set; }
 
-        public Elemento(Dado dado)
+        public Elemento(IDado dado)
         {
             MeuDado = dado;
         }
