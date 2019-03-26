@@ -10,6 +10,11 @@ namespace Gestao_de_Estoque
     {
         static void Main(string[] args)
         {
+            /*
+                ID; NomeProduto; Categoria
+                ID; QuantidadeProduto
+                ID_Pedido; ID_Produto; Qtd
+            */
         }
     }
 }
