@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gestao_de_Estoque
 {
-    interface Dado
+    class Material_Escritorio
     {
-        public Produto produto { get; set; }
     }
 }

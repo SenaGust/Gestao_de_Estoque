@@ -8,5 +8,6 @@ namespace Gestao_de_Estoque
 {
     class Lista
     {
+
     }
 }
