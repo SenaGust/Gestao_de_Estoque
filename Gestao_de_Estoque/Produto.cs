@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace Gestao_de_Estoque
 {
-    class Produto
+    abstract class Produto
     {
         public string ID { get; private set; }
         public string NomeProduto { get; private set; }
-        public int Categoria { get; private set; }        
+        public int Categoria { get; private set; }       
+        public double PrecoCusto { get; set; }
+        public double MargemLucro { get; set; }
 
-        public Produto()
+        public Produto(string ID, string NomeProduto, int Categoria, double PrecoCusto)
         {
-            ID = "0-0000";
-            NomeProduto = "AAAAAA";
-            Categoria = 0;
+            this.ID = ID;
+            this.NomeProduto = NomeProduto;
+            this.Categoria = Categoria;
+            this.PrecoCusto = PrecoCusto;
         }
 
-        public Produto(string id, string nomeProduto, int categoria)
-        {
-            this.ID = id;
-            this.NomeProduto = nomeProduto;
-            this.Categoria = categoria;
-        }
+        public abstract double CalcImposto();
+        public abstract double CalcPrecoVenda();
     }
 }
