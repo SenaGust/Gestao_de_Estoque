@@ -23,13 +23,16 @@ namespace Gestao_de_Estoque
 
             Fila pedidos = new Fila(); // estrutura de armazenamento
 
-           
-            IDado dado = null; // novo dado a ser inserido na fila
-            
-            dado.Produto = new Material_Escritorio(id, nome, tipo, preco); //instanciando um novo produto
-                                                                           // a classe filha vai mudar dependendo do produto
 
-            pedidos.Enfileirar(dado); // chama o método que adiciona um novo elemento a fila
+            //IDado dado = null; // novo dado a ser inserido na fila
+            Produto dado;
+            dado = new Material_Escritorio(id, nome, tipo, preco); //instanciando um novo produto
+                                                                   // a classe filha vai mudar dependendo do produto
+
+            Elemento elemento = new Elemento(dado);
+            pedidos.Enfileirar(elemento); // chama o método que adiciona um novo elemento a fila
+
+            Console.WriteLine(pedidos.ToString());
             Console.ReadKey();
             #endregion
         }

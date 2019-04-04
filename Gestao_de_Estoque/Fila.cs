@@ -18,11 +18,11 @@ namespace Gestao_de_Estoque
         }
 
 
-        public void Enfileirar(IDado element)
+        public void Enfileirar(Elemento element)
         {
-            Elemento novo = new Elemento(element);
+            Elemento novo = element;
 
-            this.Ultimo.Prox = novo;
+           this.Ultimo.Prox = novo;
            this.Ultimo=novo;
         }
 
@@ -58,10 +58,12 @@ namespace Gestao_de_Estoque
         {
             StringBuilder auxImpressao = new StringBuilder();
             Elemento atual = Primeiro;
+            int contador = 0;
 
             while (atual.Prox != null)
             {
-                auxImpressao.AppendLine(atual.Prox.MeuDado.ToString());
+                contador++;
+                auxImpressao.AppendLine("Produto: "+contador+" "+atual.Prox.produto.ToString()+"\n");
                 atual = atual.Prox;
             }
 
