@@ -11,7 +11,7 @@ namespace Gestao_de_Estoque
         #region Construtor
         public Comidas(string id, string nome, int categoria, double preco, double mLucro, double imposto) : base(id, nome, categoria, preco, mLucro, imposto)
         {
-
+            
         }
         #endregion
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Gestao_de_Estoque
 {
@@ -78,5 +79,7 @@ namespace Gestao_de_Estoque
             return (this.Primeiro == this.Ultimo);
         }
         #endregion
+
+       
     }
 }
