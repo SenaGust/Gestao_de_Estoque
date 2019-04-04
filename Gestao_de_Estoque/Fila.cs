@@ -23,19 +23,35 @@ namespace Gestao_de_Estoque
             Elemento novo = new Elemento(element);
 
             this.Ultimo.Prox = novo;
-            novo = this.Ultimo;
-
+           this.Ultimo=novo;
         }
 
-        public void Desenfileirar()
+        public Elemento Desenfileirar()
         {
+            if (this.Vazia()) return null;
 
+            Elemento aux = this.Primeiro.Prox;
+
+            if (aux.Prox != null)
+            {
+                this.Primeiro.Prox = aux.Prox; //aux.prox = primeiro.prox.prox
+                aux.Prox = null;
+            }
+
+            else
+            {
+                this.Primeiro.Prox = aux.Prox;
+                aux.Prox = null;
+                this.Ultimo = this.Primeiro;
+            }
+
+            return aux;
         }
 
-        public void ConsultaInicio()
-        {
+        //public void ConsultaInicio()
+        //{
 
-        }
+        //}
 
 
         public override string ToString()
