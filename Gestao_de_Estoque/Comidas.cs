@@ -8,5 +8,19 @@ namespace Gestao_de_Estoque
 {
     class Comidas : Produto
     {
+        public Comidas(string id, string nome, int categoria, double preco) : base(id, nome, categoria, preco)
+        {
+
+        }
+
+        public override double CalcImposto()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override double CalcPrecoVenda()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
