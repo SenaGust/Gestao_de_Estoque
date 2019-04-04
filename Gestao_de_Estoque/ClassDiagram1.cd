@@ -1,50 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Gestao_de_Estoque.Bebidas">
-    <Position X="0.5" Y="3.75" Width="1.5" />
+    <Position X="0.75" Y="3.75" Width="4" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Bebidas.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gestao_de_Estoque.Comidas">
-    <Position X="2.75" Y="3.75" Width="1.5" />
+    <Position X="1" Y="6.5" Width="4" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Comidas.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gestao_de_Estoque.Elemento">
-    <Position X="9.5" Y="0.5" Width="2.25" />
+    <Position X="11" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Elemento.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gestao_de_Estoque.Material_Escritorio">
-    <Position X="5" Y="3.75" Width="1.5" />
+    <Position X="6" Y="3.75" Width="4.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Material_Escritorio.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gestao_de_Estoque.Produto">
-    <Position X="2" Y="0.5" Width="4.75" />
+    <Position X="3" Y="0.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAhAAlAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAhAAhAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Produto.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Gestao_de_Estoque.Utensilios_Domesticos">
-    <Position X="7.25" Y="3.75" Width="1.5" />
+    <Position X="6" Y="6.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Utensilios_Domesticos.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Gestao_de_Estoque.Fila">
+    <Position X="13.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAgEAAAAAAAAAABAAAAAIAAIAAAAAAA=</HashCode>
+      <FileName>Fila.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Gestao_de_Estoque.IDado">
-    <Position X="7" Y="0.5" Width="2.25" />
+    <Position X="8.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IDado.cs</FileName>

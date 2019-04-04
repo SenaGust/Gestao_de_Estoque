@@ -8,21 +8,27 @@ namespace Gestao_de_Estoque
 {
     class Fila
     {
+        #region Atributos
         public Elemento Primeiro { get; private set; } //controle
         public Elemento Ultimo { get; private set; } //controle
+        #endregion
 
+        #region Construtor
         public Fila()
         {
             this.Primeiro = new Elemento(null); //sentinela
             this.Ultimo = this.Primeiro; //no começo a primeira posição é igual a ultima
         }
 
+        #endregion
+
+        #region Métodos
         public void Enfileirar(IDado dado)
         {
             Elemento novo = new Elemento(dado);
 
-           this.Ultimo.Prox = novo;
-           this.Ultimo=novo;
+            this.Ultimo.Prox = novo;
+            this.Ultimo = novo;
         }
 
         public IDado Desenfileirar()
@@ -60,7 +66,7 @@ namespace Gestao_de_Estoque
             while (atual.Prox != null)
             {
                 contador++;
-                auxImpressao.AppendLine("Produto: "+contador+" "+atual.Prox.MeuDado.ToString()+"\n");
+                auxImpressao.AppendLine("Produto: " + contador + " " + atual.Prox.MeuDado.ToString() + "\n");
                 atual = atual.Prox;
             }
 
@@ -71,5 +77,6 @@ namespace Gestao_de_Estoque
         {
             return (this.Primeiro == this.Ultimo);
         }
+        #endregion
     }
 }
