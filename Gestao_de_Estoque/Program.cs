@@ -25,12 +25,15 @@ namespace Gestao_de_Estoque
 
 
             //IDado dado = null; // novo dado a ser inserido na fila
-            Produto dado;
-            dado = new Material_Escritorio(id, nome, tipo, preco); //instanciando um novo produto
-                                                                   // a classe filha vai mudar dependendo do produto
+            IDado dado = new Material_Escritorio(id, nome, tipo, preco); //instanciando um novo produto
+            IDado dado3 = new Bebidas(id, nome, tipo, preco); //instanciando um novo produto
 
-            Elemento elemento = new Elemento(dado);
-            pedidos.Enfileirar(elemento); // chama o método que adiciona um novo elemento a fila
+            pedidos.Enfileirar(dado); // chama o método que adiciona um novo elemento a fila
+            pedidos.Enfileirar(dado3); // chama o método que adiciona um novo elemento a fila
+            pedidos.Enfileirar(dado); // chama o método que adiciona um novo elemento a fila
+            pedidos.Enfileirar(dado3); // chama o método que adiciona um novo elemento a fila
+            pedidos.Enfileirar(dado); // chama o método que adiciona um novo elemento a fila
+            pedidos.Enfileirar(dado3); // chama o método que adiciona um novo elemento a fila
 
             Console.WriteLine(pedidos.ToString());
             Console.ReadKey();
