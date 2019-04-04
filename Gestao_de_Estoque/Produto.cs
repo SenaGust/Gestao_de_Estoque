@@ -18,13 +18,14 @@ namespace Gestao_de_Estoque
         #endregion
 
         #region Construtor
-        public Produto(string ID, string NomeProduto, int Categoria, double PrecoCusto, double MargemLucro)
+        public Produto(string ID, string NomeProduto, int Categoria, double PrecoCusto, double MargemLucro, double Imposto)
         {
             this.ID = ID;
             this.NomeProduto = NomeProduto;
             this.Categoria = Categoria;
             this.PrecoCusto = PrecoCusto;
-            this.MargemLucro = PrecoCusto * MargemLucro;
+            this.MargemLucro = MargemLucro;
+            this.Imposto = Imposto;
         }
         #endregion
 

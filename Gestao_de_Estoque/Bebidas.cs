@@ -9,7 +9,7 @@ namespace Gestao_de_Estoque
     class Bebidas : Produto
     {
         #region Construtor
-        public Bebidas(string id, string nome, int categoria, double preco, double mLucro) : base(id, nome, categoria, preco, mLucro)
+        public Bebidas(string id, string nome, int categoria, double preco, double mLucro, double imposto) : base(id, nome, categoria, preco, mLucro, imposto)
         {
 
         }

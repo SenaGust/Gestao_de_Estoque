@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Gestao_de_Estoque
 {
@@ -26,13 +27,13 @@ namespace Gestao_de_Estoque
 
             string id = "1-4287", nome = "Caneta";
             int tipo = 1;
-            double preco = 0.50;
+            double preco = 0.50, porcentagemdeLucro = 0.2, imposto = 0.50;
 
             Fila pedidos = new Fila(); // estrutura de armazenamento
 
             //IDado dado = null; // novo dado a ser inserido na fila
-            IDado dado = new Material_Escritorio(id, nome, tipo, preco); //instanciando um novo produto
-            IDado dado3 = new Bebidas(id, nome, tipo, preco); //instanciando um novo produto
+            IDado dado = new Material_Escritorio(id, nome, tipo, preco, porcentagemdeLucro, imposto); //instanciando um novo produto
+            IDado dado3 = new Bebidas(id, nome, tipo, preco, porcentagemdeLucro, imposto); //instanciando um novo produto
 
             //Testando enfileirar
             Console.WriteLine("Inserindo Dados");
@@ -49,7 +50,10 @@ namespace Gestao_de_Estoque
             pedidos.Desenfileirar();
 
             //testando escrever Pilha
-            Console.WriteLine(pedidos.ToString());
+            Console.WriteLine(pedidos.ToString());            
+        }
+        public void CarregarDados()
+        {           
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Gestao_de_Estoque
     class Utensilios_Domesticos : Produto
     {
         #region Construtor
-        public Utensilios_Domesticos(string id, string nome, int categoria, double preco, double mLucro) : base(id, nome, categoria, preco, mLucro)
+        public Utensilios_Domesticos(string id, string nome, int categoria, double preco, double mLucro, double imposto) : base(id, nome, categoria, preco, mLucro, imposto)
         {
 
         }

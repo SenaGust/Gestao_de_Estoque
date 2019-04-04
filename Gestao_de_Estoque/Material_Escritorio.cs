@@ -9,7 +9,7 @@ namespace Gestao_de_Estoque
     class Material_Escritorio : Produto
     {
         #region Construtor
-        public Material_Escritorio(string id, string nome, int categoria, double preco, double mLucro) : base(id, nome, categoria, preco, mLucro)
+        public Material_Escritorio(string id, string nome, int categoria, double preco, double mLucro, double imposto) : base(id, nome, categoria, preco, mLucro, imposto)
         {
 
         }
