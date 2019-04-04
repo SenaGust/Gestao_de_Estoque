@@ -9,7 +9,7 @@ namespace Gestao_de_Estoque
     class Comidas : Produto
     {
         #region Construtor
-        public Comidas(string id, string nome, int categoria, double preco) : base(id, nome, categoria, preco)
+        public Comidas(string id, string nome, int categoria, double preco, double mLucro) : base(id, nome, categoria, preco, mLucro)
         {
 
         }
@@ -18,12 +18,12 @@ namespace Gestao_de_Estoque
         #region Métodos Abstratos
         public override double CalcImposto()
         {
-            throw new NotImplementedException();
+            return (PrecoCusto + MargemLucro) * Imposto;
         }
 
         public override double CalcPrecoVenda()
         {
-            throw new NotImplementedException();
+            return PrecoCusto + MargemLucro + CalcImposto();
         }
         #endregion
 

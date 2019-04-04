@@ -9,7 +9,7 @@ namespace Gestao_de_Estoque
     class Material_Escritorio : Produto
     {
         #region Construtor
-        public Material_Escritorio(string id, string nome, int categoria, double preco) : base(id, nome, categoria, preco)
+        public Material_Escritorio(string id, string nome, int categoria, double preco, double mLucro) : base(id, nome, categoria, preco, mLucro)
         {
 
         }
@@ -18,13 +18,13 @@ namespace Gestao_de_Estoque
         #region Métodos Abstratos
         public override double CalcImposto()
         {
-            throw new NotImplementedException();
+            return (PrecoCusto + MargemLucro) * Imposto;
         }
 
         //preço de custo, somado à margem de lucro, somado ao imposto que é calculado em cima do valor anterior
         public override double CalcPrecoVenda()
         {
-            throw new NotImplementedException();
+            return PrecoCusto + MargemLucro + CalcImposto();
         }
         #endregion
 
