@@ -15,6 +15,8 @@ namespace Gestao_de_Estoque
                 ID; QuantidadeProduto
                 ID_Pedido; ID_Produto; Qtd
             */
+           
+
         }
     }
 }
