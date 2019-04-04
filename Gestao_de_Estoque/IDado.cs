@@ -8,6 +8,7 @@ namespace Gestao_de_Estoque
 {
     interface IDado
     {
-        Produto Produto { get; set; }
+        string ToString();
+        bool Equals(Object Obj);
     }
 }

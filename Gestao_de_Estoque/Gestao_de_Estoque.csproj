@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Bebidas.cs" />
     <Compile Include="Comidas.cs" />
-    <Compile Include="Dado.cs" />
+    <Compile Include="IDado.cs" />
     <Compile Include="Elemento.cs" />
     <Compile Include="Fila.cs" />
     <Compile Include="Material_Escritorio.cs" />

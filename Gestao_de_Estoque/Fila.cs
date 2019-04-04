@@ -17,16 +17,15 @@ namespace Gestao_de_Estoque
             this.Ultimo = this.Primeiro; //no começo a primeira posição é igual a ultima
         }
 
-
-        public void Enfileirar(Elemento element)
+        public void Enfileirar(IDado dado)
         {
-            Elemento novo = element;
+            Elemento novo = new Elemento(dado);
 
            this.Ultimo.Prox = novo;
            this.Ultimo=novo;
         }
 
-        public Elemento Desenfileirar()
+        public IDado Desenfileirar()
         {
             if (this.Vazia()) return null;
 
@@ -37,7 +36,6 @@ namespace Gestao_de_Estoque
                 this.Primeiro.Prox = aux.Prox; //aux.prox = primeiro.prox.prox
                 aux.Prox = null;
             }
-
             else
             {
                 this.Primeiro.Prox = aux.Prox;
@@ -45,14 +43,13 @@ namespace Gestao_de_Estoque
                 this.Ultimo = this.Primeiro;
             }
 
-            return aux;
+            return aux.MeuDado;
         }
 
         //public void ConsultaInicio()
         //{
 
         //}
-
 
         public override string ToString()
         {
@@ -63,7 +60,7 @@ namespace Gestao_de_Estoque
             while (atual.Prox != null)
             {
                 contador++;
-                auxImpressao.AppendLine("Produto: "+contador+" "+atual.Prox.produto.ToString()+"\n");
+                auxImpressao.AppendLine("Produto: "+contador+" "+atual.Prox.MeuDado.ToString()+"\n");
                 atual = atual.Prox;
             }
 
@@ -74,10 +71,5 @@ namespace Gestao_de_Estoque
         {
             return (this.Primeiro == this.Ultimo);
         }
-
-        //public void UnirFilas(Fila fila)
-        //{
-
-        //}
     }
 }

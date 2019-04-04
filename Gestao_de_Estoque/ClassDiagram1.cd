@@ -17,15 +17,8 @@
   <Class Name="Gestao_de_Estoque.Elemento">
     <Position X="9.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Elemento.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Gestao_de_Estoque.Lista">
-    <Position X="12" Y="0.5" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Lista.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gestao_de_Estoque.Material_Escritorio">
@@ -36,11 +29,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Gestao_de_Estoque.Produto">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+    <Position X="2" Y="0.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAhAAhAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAhAAlAAAAAACAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Produto.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Gestao_de_Estoque.Utensilios_Domesticos">
     <Position X="7.25" Y="3.75" Width="1.5" />
@@ -52,8 +46,8 @@
   <Interface Name="Gestao_de_Estoque.IDado">
     <Position X="7" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
-      <FileName>Dado.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDado.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

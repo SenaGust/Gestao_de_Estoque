@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 namespace Gestao_de_Estoque
 {
     class Elemento
-    {        
+    {
+        public IDado MeuDado { get; set; }
         public Elemento Prox { get; set; }
 
-        public Produto produto { get; set; }
-
-        public Elemento(Produto produto)
+        public Elemento(IDado dado)
         {
-            this.produto = produto;
+            this.MeuDado = dado;
         }
     }
 }
