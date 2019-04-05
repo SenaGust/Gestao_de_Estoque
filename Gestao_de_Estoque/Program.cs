@@ -15,9 +15,9 @@ namespace Gestao_de_Estoque
             string path = "arquivo.txt";
             Fila pedidos_gerais = Ler_arquivo.Carregar_dados(path);
             Console.WriteLine(pedidos_gerais.ToString());
-
+            
             //TestarImplementacaoLista();
-
+            //criar um vetor de filas 
             Console.WriteLine("Pressione qualquer tecla para continuar...");
             Console.ReadKey();
         }
