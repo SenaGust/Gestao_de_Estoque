@@ -30,7 +30,7 @@ namespace Gestao_de_Estoque
         #region Métodos Interface
         public override string ToString()
         {
-            return String.Format("Id: {0}; Categoria: Bebidas; Nome do produto: {1}; Categoria: {2}; Custo: {3}; Margem de lucro: {4}",
+            return String.Format("Id: {0}; Categoria: Bebidas; Nome do produto: {1}; Custo: {2}; Margem de lucro: {3}",
                 ID, NomeProduto, PrecoCusto, MargemLucro);
         }
         public bool Equals(Produto product)
