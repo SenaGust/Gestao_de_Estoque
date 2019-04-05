@@ -7,14 +7,11 @@ using System.IO;
 
 namespace Gestao_de_Estoque
 {
-     static class Ler_arquivo
+    static class Arquivo
     {
-
-        //vai receber um vetor de fila
         public static Fila Carregar_dados(string arquivo)
         {
             Fila produtos = new Fila();
-
             int contador = 0;
 
             if (!File.Exists(arquivo))
@@ -39,23 +36,24 @@ namespace Gestao_de_Estoque
                     switch (int.Parse(vetorAux[2]))
                     {
                         case 1:
-                           dado = new Bebidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5])); //instanciando um novo produto
-                           
+                            dado = new Bebidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5])); //instanciando um novo produto
+                            
                             break;
                         case 2:
-                           dado = new Comidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
+                            dado = new Comidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
                             
                             break;
                         case 3:
                             dado = new Comidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
-                            
 
                             break;
                         case 4:
                             dado = new Comidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
                             
                             break;
+                        default:
 
+                            break;
 
                     }
                     produtos.Enfileirar(dado);
@@ -63,8 +61,6 @@ namespace Gestao_de_Estoque
             }
 
             return produtos;
-        }
-
-       
+        } 
     }
 }

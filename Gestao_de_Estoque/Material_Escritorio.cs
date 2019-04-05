@@ -9,30 +9,33 @@ namespace Gestao_de_Estoque
     class Material_Escritorio : Produto
     {
         #region Construtor
-        public Material_Escritorio(string id, string nome, int categoria, double preco, double mLucro, double imposto) : base(id, nome, categoria, preco, mLucro, imposto)
+        public Material_Escritorio(string id, string nome, double preco, double mLucro) : base(id, nome, preco, mLucro)
         {
-
+            Imposto = 0.4;
         }
         #endregion
 
         #region Métodos Abstratos
         public override double CalcImposto()
         {
-            return (PrecoCusto + MargemLucro) * Imposto;
+            return (PrecoCusto + (PrecoCusto * MargemLucro)) * Imposto;
         }
 
-        //preço de custo, somado à margem de lucro, somado ao imposto que é calculado em cima do valor anterior
         public override double CalcPrecoVenda()
         {
-            return PrecoCusto + MargemLucro + CalcImposto();
+            return PrecoCusto + (PrecoCusto * MargemLucro) + CalcImposto();
         }
         #endregion
 
         #region Métodos Interface
         public override string ToString()
         {
-            return String.Format("Id: {0}; Categoria: Material de Escritorio; Nome do produto: {1}; Categoria: {2}; Custo: {3}; Margem de lucro: {4}",
-                ID, NomeProduto, Categoria, PrecoCusto, MargemLucro);
+            return String.Format("Id: {0}; Categoria: Material de Escritorio; Nome do produto: {1}; Custo: {2}; Margem de lucro: {3}",
+                ID, NomeProduto, PrecoCusto, MargemLucro);
+        }
+        public bool Equals(Produto product)
+        {
+            return (this.ID == product.ID);
         }
         #endregion
     }
