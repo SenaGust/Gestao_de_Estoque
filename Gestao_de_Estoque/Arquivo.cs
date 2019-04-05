@@ -33,23 +33,23 @@ namespace Gestao_de_Estoque
                 {
                     IDado dado = null;
 
-                    switch (int.Parse(vetorAux[2]))
+                    switch (int.Parse(vetorAux[0]))
                     {
                         case 1:
-                            dado = new Bebidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5])); //instanciando um novo produto
+                            dado = new Bebidas(vetorAux[1], vetorAux[2], Convert.ToDouble(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5])); //instanciando um novo produto
                             
                             break;
                         case 2:
-                            dado = new Comidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
-                            
+                            dado = new Comidas(vetorAux[1], vetorAux[2], Convert.ToDouble(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
+
                             break;
                         case 3:
-                            dado = new Comidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
+                            dado = new Material_Escritorio(vetorAux[1], vetorAux[2], Convert.ToDouble(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
 
                             break;
                         case 4:
-                            dado = new Comidas(vetorAux[0], vetorAux[1], int.Parse(vetorAux[2]), double.Parse(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
-                            
+                            dado = new Utensilios_Domesticos(vetorAux[1], vetorAux[2], Convert.ToDouble(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
+
                             break;
                         default:
 

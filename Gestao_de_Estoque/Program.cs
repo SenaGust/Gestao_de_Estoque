@@ -31,13 +31,13 @@ namespace Gestao_de_Estoque
             */
 
             string id = "1-4287", nome = "Caneta";            
-            double preco = 0.50, porcentagemdeLucro = 0.2;
+            double preco = 0.50, pLucroMax = 0.3, pLucroMin = 0.2;
 
             Fila pedidos_gerais = new Fila(); // estrutura de armazenamento
 
             //IDado dado = null; // novo dado a ser inserido na fila
-            IDado dado = new Material_Escritorio(id, nome, preco, porcentagemdeLucro); //instanciando um novo produto
-            IDado dado3 = new Bebidas(id, nome, preco, porcentagemdeLucro); //instanciando um novo produto
+            IDado dado = new Material_Escritorio(id, nome, preco, pLucroMin, pLucroMax); //instanciando um novo produto
+            IDado dado3 = new Bebidas(id, nome, preco, pLucroMin, pLucroMax); //instanciando um novo produto
 
             //Testando enfileirar
             Console.WriteLine("Inserindo Dados");
