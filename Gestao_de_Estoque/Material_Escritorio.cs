@@ -33,6 +33,10 @@ namespace Gestao_de_Estoque
             return String.Format("Id: {0}; Categoria: Material de Escritorio; Nome do produto: {1}; Categoria: {2}; Custo: {3}; Margem de lucro: {4}",
                 ID, NomeProduto, PrecoCusto, MargemLucro);
         }
+        public bool Equals(Produto product)
+        {
+            return (this.ID == product.ID);
+        }
         #endregion
     }
 }
