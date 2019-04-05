@@ -13,7 +13,13 @@ namespace Gestao_de_Estoque
         static void Main(string[] args)
         {
             string path = "arquivo.txt";
-            Fila pedidos_gerais = Arquivo.Carregar_dados(path);
+            Fila[] vet_filas = new Fila[4];
+
+            for(int i=0;i<4;i++)
+            {
+                vet_filas[i] = new Fila();
+            }
+            Fila pedidos_gerais = Arquivo.Carregar_dados(path,vet_filas);
             Console.WriteLine(pedidos_gerais.ToString());
             
             //TestarImplementacaoLista();

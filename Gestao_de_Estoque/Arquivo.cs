@@ -9,7 +9,7 @@ namespace Gestao_de_Estoque
 {
     static class Arquivo
     {
-        public static Fila Carregar_dados(string arquivo)
+        public static Fila Carregar_dados(string arquivo,Fila [] vet)
         {
             Fila produtos = new Fila();
             int contador = 0;
@@ -37,19 +37,19 @@ namespace Gestao_de_Estoque
                     {
                         case 1:
                             dado = new Bebidas(vetorAux[1], vetorAux[2], Convert.ToDouble(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5])); //instanciando um novo produto
-                            
+                            vet[0].Enfileirar(dado);
                             break;
                         case 2:
                             dado = new Comidas(vetorAux[1], vetorAux[2], Convert.ToDouble(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
-
+                            vet[1].Enfileirar(dado);
                             break;
                         case 3:
                             dado = new Material_Escritorio(vetorAux[1], vetorAux[2], Convert.ToDouble(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
-
+                            vet[2].Enfileirar(dado);
                             break;
                         case 4:
                             dado = new Utensilios_Domesticos(vetorAux[1], vetorAux[2], Convert.ToDouble(vetorAux[3]), double.Parse(vetorAux[4]), double.Parse(vetorAux[5]));
-
+                            vet[3].Enfileirar(dado);
                             break;
                         default:
 
