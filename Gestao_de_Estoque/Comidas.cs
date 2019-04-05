@@ -9,21 +9,21 @@ namespace Gestao_de_Estoque
     class Comidas : Produto
     {
         #region Construtor
-        public Comidas(string id, string nome, int categoria, double preco, double mLucro, double imposto) : base(id, nome, categoria, preco, mLucro, imposto)
+        public Comidas(string id, string nome, double preco, double mLucro) : base(id, nome, preco, mLucro)
         {
-            
+            Imposto = 0.1;
         }
         #endregion
 
         #region Métodos Abstratos
         public override double CalcImposto()
         {
-            return (PrecoCusto + MargemLucro) * Imposto;
+            return (PrecoCusto + (PrecoCusto * MargemLucro)) * Imposto;
         }
 
         public override double CalcPrecoVenda()
         {
-            return PrecoCusto + MargemLucro + CalcImposto();
+            return PrecoCusto + (PrecoCusto * MargemLucro) + CalcImposto();
         }
         #endregion
 
@@ -31,7 +31,7 @@ namespace Gestao_de_Estoque
         public override string ToString()
         {
             return String.Format("Id: {0}; Categoria: Comidas; Nome do produto: {1}; Categoria: {2}; Custo: {3}; Margem de lucro: {4}",
-                ID, NomeProduto, Categoria, PrecoCusto, MargemLucro);
+                ID, NomeProduto, PrecoCusto, MargemLucro);
         }
         #endregion
     }

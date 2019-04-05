@@ -10,22 +10,19 @@ namespace Gestao_de_Estoque
     {
         #region Atributos
         public string ID { get; private set; }
-        public string NomeProduto { get; private set; }
-        public int Categoria { get; private set; }
+        public string NomeProduto { get; private set; }        
         public double PrecoCusto { get; set; }
         public double MargemLucro { get; set; }
         public double Imposto { get; set; }
         #endregion
 
         #region Construtor
-        public Produto(string ID, string NomeProduto, int Categoria, double PrecoCusto, double MargemLucro, double Imposto)
+        public Produto(string ID, string NomeProduto, double PrecoCusto, double MargemLucro)
         {
             this.ID = ID;
-            this.NomeProduto = NomeProduto;
-            this.Categoria = Categoria;
+            this.NomeProduto = NomeProduto;            
             this.PrecoCusto = PrecoCusto;
-            this.MargemLucro = MargemLucro;
-            this.Imposto = Imposto;
+            this.MargemLucro = MargemLucro;            
         }
         #endregion
 
