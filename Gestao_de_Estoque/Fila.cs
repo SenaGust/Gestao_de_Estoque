@@ -79,7 +79,5 @@ namespace Gestao_de_Estoque
             return (this.Primeiro == this.Ultimo);
         }
         #endregion
-
-       
     }
 }
