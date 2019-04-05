@@ -12,9 +12,9 @@ namespace Gestao_de_Estoque
         public string ID { get; private set; }
         public string NomeProduto { get; private set; }
         public int Categoria { get; private set; }
-        public double PrecoCusto { get; set; }
-        public double MargemLucro { get; set; }
-        public double Imposto { get; set; }
+        public double PrecoCusto { get; private set; }
+        public double MargemLucro { get; private set; }
+        public double Imposto { get; private set; }
         #endregion
 
         #region Construtor

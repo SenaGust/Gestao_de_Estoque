@@ -48,7 +48,7 @@
     <Compile Include="IDado.cs" />
     <Compile Include="Elemento.cs" />
     <Compile Include="Fila.cs" />
-    <Compile Include="Ler_arquivo.cs" />
+    <Compile Include="Arquivo.cs" />
     <Compile Include="Material_Escritorio.cs" />
     <Compile Include="Pedidos.cs" />
     <Compile Include="Produto.cs" />
