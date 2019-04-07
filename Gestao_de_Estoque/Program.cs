@@ -5,7 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-//classe pedidos gerais com quantidade também
+/* TRABALHO PRÁTICO DE ALGORITMOS E ESTRUTURAS DE DADOS - Primeira parte
+ * Nomes: Gustavo Ribeiro de Freitas Sena, João Vitor Soares Mendes, Lorena Alves Aguilar e Nathan Ribeiro Ferreira Pinto
+ * Data: 07/04/2019
+ */
 namespace Gestao_de_Estoque
 {
     class Program
@@ -19,57 +22,28 @@ namespace Gestao_de_Estoque
             {
                 vet_filas[i] = new Fila();
             }
+
             Fila pedidos_gerais = Arquivo.Carregar_dados(path,vet_filas);
+            Console.WriteLine("\n\t.:Fila de pedidos gerais:. \n");
             Console.WriteLine(pedidos_gerais.ToString());
             
-            //TestarImplementacaoLista();
-            //criar um vetor de filas 
+            Console.WriteLine("\n\t.:Fila de pedidos da categoria bebidas:. \n");
+            Console.WriteLine(vet_filas[0].ToString());
+
+            Console.WriteLine("\n\t.:Fila de pedidos da categoria comidas:. \n");
+            Console.WriteLine(vet_filas[1].ToString());
+
+            Console.WriteLine("\n\t.:Fila de pedidos da categoria material de escritório:. \n");
+            Console.WriteLine(vet_filas[2].ToString());
+
+            Console.WriteLine("\n\t.:Fila de pedidos da categoria utensílios domésticos:. \n");
+            Console.WriteLine(vet_filas[3].ToString());
+
+            
             Console.WriteLine("Pressione qualquer tecla para continuar...");
             Console.ReadKey();
         }
 
-        static void TestarImplementacaoLista()
-        {
-            /*
-                ID; NomeProduto; Categoria
-                ID; QuantidadeProduto
-                ID_Pedido; ID_Produto; Qtd
-            */
-
-            string id = "1-4287", nome = "Caneta";            
-            double preco = 0.50, pLucroMax = 0.3, pLucroMin = 0.2;
-
-            Fila pedidos_gerais = new Fila(); // estrutura de armazenamento
-
-            //IDado dado = null; // novo dado a ser inserido na fila
-            IDado dado = new Material_Escritorio(id, nome, preco, pLucroMin, pLucroMax); //instanciando um novo produto
-            IDado dado3 = new Bebidas(id, nome, preco, pLucroMin, pLucroMax); //instanciando um novo produto
-
-            //Testando enfileirar
-            Console.WriteLine("Inserindo Dados");
-            pedidos_gerais.Enfileirar(dado); // chama o método que adiciona um novo elemento a fila
-            pedidos_gerais.Enfileirar(dado3); // chama o método que adiciona um novo elemento a fila
-            pedidos_gerais.Enfileirar(dado); // chama o método que adiciona um novo elemento a fila
-            pedidos_gerais.Enfileirar(dado3); // chama o método que adiciona um novo elemento a fila
-            pedidos_gerais.Enfileirar(dado); // chama o método que adiciona um novo elemento a fila
-            pedidos_gerais.Enfileirar(dado3); // chama o método que adiciona um novo elemento a fila
-                                              //Console.WriteLine(pedidos.ToString());
-                                              //pedidos.ToString();
-
-            Console.WriteLine("Desenfileirando");
-            //Testando desenfileirar
-            Fila aux = new Fila();
-            while (!pedidos_gerais.Vazia())
-            {
-                aux.Enfileirar(pedidos_gerais.Desenfileirar());
-            }
-
-
-            //testando escrever Pilha
-            Console.WriteLine("aux teste: " + aux.ToString());
-
-
-            //passei o método carregar dados para dentro da fila
-        }
+        
     }
 }
